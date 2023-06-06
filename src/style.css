@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(139, 134, 134, 0.242);
+}
+
+.to-do-list {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listwrap {
+  max-width: 768px;
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid rgba(139, 134, 134, 0.242);
+  box-shadow: 0 2px 5px rgba(139, 134, 134, 0.8);
+}
+
+.icon {
+  color: #acadaf;
+}
+
+.div {
+  height: 4rem;
+  border-bottom: 1px solid rgba(139, 134, 134, 0.242);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1rem;
+}
+
+.addinput {
+  height: 100%;
+  width: 98%;
+  border: none;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: rgba(139, 134, 134, 0.8);
+}
+
+.addinput:focus {
+  outline: none;
+}
+
+.spanicon {
+  width: 2%;
+}
+
+.listdiv {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listlabel {
+  font-size: 1.5rem;
+}
+
+.button {
+  width: 100%;
+  border: none;
+  text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  color: rgba(139, 134, 134, 0.8);
+}
