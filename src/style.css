@@ -97,7 +97,7 @@ input {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--sec);
+  border-bottom: 1px solid blue;
 }
 
 #add i {
