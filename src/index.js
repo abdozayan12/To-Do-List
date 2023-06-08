@@ -1,7 +1,15 @@
 import './style.css';
 import tasks, { submit, listContainer } from './modules/tasks.js';
+import TaskStatus from './modules/updateStatus.js';
 
 window.onload = tasks.displayTasks();
+TaskStatus.updateStatus();
+TaskStatus.clearCompleted();
+
+const refersh = document.querySelector('.refresh');
+refersh.addEventListener('click', () => {
+  window.location.reload();
+});
 
 submit.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
@@ -10,5 +18,6 @@ submit.addEventListener('keypress', (e) => {
     submit.value = '';
     listContainer.innerHTML = '';
     tasks.displayTasks();
+    TaskStatus.updateStatus();
   }
-
+});
