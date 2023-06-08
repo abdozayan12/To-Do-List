@@ -22,7 +22,7 @@ export const enter = (event) => {
   }
 };
 
-export function edit(event) {
+export function edite(event) {
   const label = document.querySelectorAll('.listlabel');
   if (event.key === 'Enter' || event.key === 'Escape') {
     const inputvalue = this.value;
