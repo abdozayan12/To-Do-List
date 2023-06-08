@@ -1,4 +1,3 @@
-import saveData from './saveData.js';
 
 const tasksList = JSON.parse(localStorage.getItem('todo')) || [];
 
@@ -16,7 +15,7 @@ export default class Tasks {
     const task = new Tasks(submit.value, false, tasksList.length + 1);
     if (submit.value !== '') {
       tasksList.push(task);
-      saveData(tasksList);
+
     }
   }
 
@@ -25,9 +24,7 @@ export default class Tasks {
     tasksList.forEach((task) => {
       singleTask += `<li class="task-item" id='${task.index}'>
                       <div class="checkList">
-                       <input type="checkbox" name="check" class="chcek" ${task.completed === true ? 'checked' : ''}>
-                       <!-- put the description inside input so the user can edit it -->
-                       <input tabindex="-1" class='inputDesc ${!task.completed ? '' : 'completed'}' value="${task.description}">
+
                         </div>
                       <i class="fa-solid fa-trash delete"></i>
                   </li>`;
@@ -48,7 +45,7 @@ export default class Tasks {
       editTask.addEventListener('change', () => {
         if (editTask.value) {
           tasksList[i].description = editTask.value;
-          saveData(tasksList);
+
         }
       });
     });
@@ -62,9 +59,9 @@ export default class Tasks {
     });
 
     listContainer.innerHTML = '';
-    saveData(tasksList);
+
     Tasks.displayTasks();
   }
 }
 
-export { submit, listContainer, tasksList };
+
