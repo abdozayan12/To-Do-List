@@ -11,4 +11,4 @@ submit.addEventListener('keypress', (e) => {
     listContainer.innerHTML = '';
     tasks.displayTasks();
   }
-});
+
