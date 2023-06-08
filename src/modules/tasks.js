@@ -1,3 +1,5 @@
+import saveData from './saveData.js';
+
 const tasksList = JSON.parse(localStorage.getItem('todo')) || [];
 
 const listContainer = document.querySelector('.tasks-container');
@@ -14,7 +16,7 @@ export default class Tasks {
     const task = new Tasks(submit.value, false, tasksList.length + 1);
     if (submit.value !== '') {
       tasksList.push(task);
-      localStorage.setItem('todo', JSON.stringify(tasksList));
+      saveData(tasksList);
     }
   }
 
@@ -23,9 +25,9 @@ export default class Tasks {
     tasksList.forEach((task) => {
       singleTask += `<li class="task-item" id='${task.index}'>
                       <div class="checkList">
-                       <input type="checkbox" name="check" class="chcek">
+                       <input type="checkbox" name="check" class="chcek" ${task.completed === true ? 'checked' : ''}>
                        <!-- put the description inside input so the user can edit it -->
-                       <input class='inputDesc' value="${task.description}">
+                       <input tabindex="-1" class='inputDesc ${!task.completed ? '' : 'completed'}' value="${task.description}">
                         </div>
                       <i class="fa-solid fa-trash delete"></i>
                   </li>`;
@@ -46,7 +48,7 @@ export default class Tasks {
       editTask.addEventListener('change', () => {
         if (editTask.value) {
           tasksList[i].description = editTask.value;
-          localStorage.setItem('todo', JSON.stringify(tasksList));
+          saveData(tasksList);
         }
       });
     });
@@ -60,9 +62,9 @@ export default class Tasks {
     });
 
     listContainer.innerHTML = '';
-    localStorage.setItem('todo', JSON.stringify(tasksList));
+    saveData(tasksList);
     Tasks.displayTasks();
   }
 }
 
-export { submit, listContainer };
+export { submit, listContainer, tasksList };

@@ -32,7 +32,7 @@ main {
 }
 
 .title {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -66,7 +66,12 @@ li {
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid var(--sec);
-  font-size: 14px;
+  font-size: 18px;
+}
+
+.checkList {
+  position: relative;
+  margin-right: 10px;
 }
 
 li .checkList {
@@ -78,7 +83,7 @@ input {
   border: none;
   color: aqua;
   background: transparent;
-  font-size: 14px;
+  font-size: 18px;
   font-style: italic;
   outline: 0;
 }
@@ -116,6 +121,63 @@ input {
   line-height: 1.5rem;
   font-size: inherit;
   cursor: pointer;
+}
+
+.completed {
+  transition: opacity 0.3s ease-in-out;
+  text-decoration: line-through var(--text);
+  color: gray;
+}
+
+.refresh:hover {
+  transform: rotateZ(90deg);
+}
+
+.task-item:hover {
+  background-color: var(--sec);
+}
+
+.chcek {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid transparent; /* Hide the square border */
+  background-color: var(--fourth);
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.chcek:checked {
+  background-color: var(--fourth);
+}
+
+.chcek::after {
+  content: "\2713"; /* Checkmark character */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: var(--text);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Initially hide the checkmark */
+}
+
+.chcek:checked::after {
+  opacity: 1; /* Show the checkmark when checked */
+}
+
+.inputDesc {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--text);
+  padding: 2px;
 }
 
 @media screen and (min-width: 768px) {
