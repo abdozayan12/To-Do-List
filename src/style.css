@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&display=swap");
 
 :root {
-  --sec: #bbd6b8;
-  --main: #dbe4c6;
+  --sec: #b3dcc4;
+  --main: #13160c;
   --third: #989898;
-  --fourth: #94af9f;
-  --text: #3e4b43;
+  --fourth: #eef3f0;
+  --text: #b3dcc4;
 }
 
 body {
@@ -81,6 +81,7 @@ li .checkList {
 
 input {
   border: none;
+  color: aqua;
   background: transparent;
   font-size: 14px;
   font-style: italic;
@@ -182,7 +183,7 @@ input {
 @media screen and (min-width: 768px) {
   .listCont {
     background-color: var(--main);
-    min-width: 50%;
+    min-width: 80%;
     box-shadow:
       0 10px 15px -3px rgba(0, 0, 0, 0.1),
       0 10px 15px -3px rgba(0, 0, 0, 0.1);
