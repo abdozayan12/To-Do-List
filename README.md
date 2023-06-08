@@ -5,7 +5,7 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
+- [📗 Table of Contents](#-table-of-contents)
 - [📖To Do List ](#to-do-list-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -42,7 +42,7 @@ To Do List
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://abdozayan12.github.io/To-Do-List/dist/)
+- [Live Demo Link](https://abdozayan12.github.io/To-Do-List)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
