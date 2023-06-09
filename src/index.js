@@ -1,6 +1,6 @@
 import './style.css';
 import tasks, { submit, listContainer } from './modules/tasks.js';
-import TaskStatus from './modules/updateStatus.js';
+import TaskStatus from './modules/Status.js';
 
 window.onload = tasks.displayTasks();
 TaskStatus.updateStatus();
