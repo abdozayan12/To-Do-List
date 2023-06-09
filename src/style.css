@@ -162,7 +162,7 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 16px;
-  color: var(--text);
+  color: #000;
   transition: opacity 0.3s ease-in-out;
   opacity: 0; /* Initially hide the checkmark */
 }
