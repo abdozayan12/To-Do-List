@@ -23,7 +23,7 @@ export default class Tasks {
   static displayTasks = () => {
     let singleTask = '';
     tasksList.forEach((task) => {
-      singleTask += `<li class="task-item" id='${task.index}'>
+      singleTask += `<li class="task-item draggable" draggable="true" id='${task.index}'>
                       <div class="checkList">
                        <input type="checkbox" name="check" class="chcek" ${task.completed === true ? 'checked' : ''}>
                        <!-- put the description inside input so the user can edit it -->
