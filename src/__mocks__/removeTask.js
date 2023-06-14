@@ -10,7 +10,7 @@ const removeTask = (index) => {
   });
 
   listContainer.innerHTML = '';
-  save(tasksList);
+  saveData(tasksList);
 };
 
 export default removeTask;
