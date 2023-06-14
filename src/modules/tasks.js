@@ -152,4 +152,6 @@ function addDragAndDropListeners() {
   });
 }
 
-export { submit, listContainer, tasksList };
+export {
+  submit, listContainer, tasksList, addDragAndDropListeners,
+};
